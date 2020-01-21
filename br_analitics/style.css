@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  background: #0f2135;
+  padding: 23px 0;
+}
+
+.header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url(img/logo.svg);
+  width: 140px;
+  height: 54px;
+}
+
+.header .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .navigation .nav-link {
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding: 8px 0;
+  margin-left: 54px;
+}
+
+.main .screen {
+  background: url(img/wpapers-ru-white-and-blue.png);
+  padding-top: 109px;
+}
+
+.main .screen .container {
+  max-width: 769px;
+}
+
+.main .screen .content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .screen .content h1 {
+  font-size: 42px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0f2135;
+  margin-bottom: 33px;
+}
+
+.main .screen .content p {
+  font-size: 28px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #0f2135;
+  margin-bottom: 31px;
+}
+
+.main .screen .content .btn {
+  width: 225px;
+  height: 58px;
+  border-radius: 8px;
+  background-color: #e43898;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-bottom: 95px;
+}
+
+.main .cases {
+  background: #f2f4f5;
+  padding: 73px 16px 79px;
+}
+
+.main .cases .container {
+  max-width: 1166px;
+}
+
+.main .cases h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0f2135;
+  margin-bottom: 30px;
+}
+
+.main .cases .cases-items {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 14px 0 rgba(15, 33, 53, 0.11);
+          box-shadow: 0 2px 14px 0 rgba(15, 33, 53, 0.11);
+  background-color: #ffffff;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.main .cases .cases-items .case_image {
+  height: 163px;
+}
+
+.main .cases .cases-items .cases-items-item {
+  padding: 20px 25px 0;
+}
+
+.main .cases .cases-items .cases-items-item .date {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #7f8d9c;
+  margin-bottom: 11px;
+}
+
+.main .cases .cases-items .cases-items-item .title {
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #0f2135;
+  margin-bottom: 12px;
+}
+
+.main .cases .cases-items .cases-items-item .text {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #0f2135;
+}
+
+.main .cases .cases-items .read-more {
+  border-top: 1px solid rgba(15, 33, 53, 0.11);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 17px 25px 22px;
+}
+
+.main .cases .cases-items .read-more p {
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  color: #7f8d9c;
+  margin: 0;
+}
+
+.footer {
+  padding: 75px 0 92px;
+}
+
+.footer .container {
+  max-width: 1166px;
+}
+
+.footer .container .footer-text p:first-of-type {
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  color: #0f2135;
+  margin-bottom: 65px;
+}
+
+.footer .container .footer-text p:last-of-type {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #7f8d9c;
+}
+
+.footer .container .footer-form .form input[type="text"] {
+  border-radius: 8px;
+  border: solid 1px #7f8d9c;
+  background-color: #ffffff;
+  padding: 12px 20px 13px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-bottom: 27px;
+}
+
+.footer .container .footer-form .form .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+}
+
+.footer .container .footer-form .form .check p {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0f2135;
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+
+.footer .container .footer-form .form .check p a {
+  color: #e43898;
+}
+
+.footer .container .footer-form .form .buttons input[type="submit"] {
+  width: 183px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: #e43898;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-right: 17px;
+}
+
+.footer .container .footer-form .form .buttons input[type="reset"] {
+  width: 137px;
+  height: 44px;
+  border-radius: 8px;
+  border: solid 1px #e43898;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #e43898;
+}
+/*# sourceMappingURL=style.css.map */
