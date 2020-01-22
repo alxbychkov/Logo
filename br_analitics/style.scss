@@ -26,14 +26,14 @@ body {
       background-position: center;
       width: 140px;
       height: 54px;
-      @media screen and (max-width:561px) {
+      @media screen and (max-width: 561px) {
         width: 110px;
         height: 42px;
       }
     }
     .navigation {
       justify-content: flex-end;
-      @media screen and (max-width:561px) {
+      @media screen and (max-width: 561px) {
         display: none;
       }
       .nav-link {
@@ -51,9 +51,9 @@ body {
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      transition: .3s linear;
+      transition: 0.3s linear;
       cursor: pointer;
-      @media screen and (max-width:561px) {
+      @media screen and (max-width: 561px) {
         display: block;
       }
     }
@@ -64,19 +64,19 @@ body {
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      transition: .3s linear;
+      transition: 0.3s linear;
     }
   }
   .mobile-nav {
     display: none;
     border-top: 1px solid #ffffff;
     position: absolute;
-    top: -370px;
     left: 0;
     right: 0;
     z-index: -1;
-    transition: .8s ease;
-    @media screen and (max-width:561px) {
+    transform: translateY(-570px);
+    transition: all 0.8s ease;
+    @media screen and (max-width: 561px) {
       display: block;
     }
     .navigation {
@@ -111,6 +111,10 @@ body {
       }
     }
   }
+  .mobile-nav.visible {
+    transform: translateY(0);
+    transition: all 0.8s ease;
+  }
   .head-scroll {
     padding: 13px 0;
     position: fixed;
@@ -118,9 +122,9 @@ body {
     right: 0;
     left: 0;
     transform: translateY(-100px);
-    transition: all .8s ease;
+    transition: all 0.8s ease;
     z-index: 1000;
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
       display: none;
     }
     .col-1 {
@@ -157,7 +161,7 @@ body {
         line-height: normal;
         letter-spacing: normal;
         color: #ffffff;
-        transition: .5s;
+        transition: 0.5s;
         &:hover,
         &:focus {
           border: 1px solid #9f0e60;
@@ -168,7 +172,7 @@ body {
   }
   .head-scroll.scrolled {
     transform: translateY(0);
-    transition: all .8s ease;
+    transition: all 0.8s ease;
   }
   .navigation {
     display: flex;
@@ -182,22 +186,22 @@ body {
       letter-spacing: normal;
       color: #ffffff;
       padding: 8px 0;
-      transition: .5s;
+      transition: 0.5s;
       position: relative;
       &::after {
-        content: '';
+        content: "";
         display: block;
         width: 100%;
         height: 8px;
         position: absolute;
-        transition: .5s;
+        transition: 0.5s;
       }
       &:hover {
         &::after {
           background-color: #e43898;
           box-shadow: 0 -2px 13px 0 #e43898;
         }
-      } 
+      }
     }
     .nav-link.active {
       color: #e43898;
@@ -229,7 +233,7 @@ body {
         text-align: center;
         color: #0f2135;
         margin-bottom: 33px;
-        @media screen and (max-width:561px) {
+        @media screen and (max-width: 561px) {
           font-size: 32px;
         }
       }
@@ -243,7 +247,7 @@ body {
         text-align: center;
         color: #0f2135;
         margin-bottom: 31px;
-        @media screen and (max-width:561px) {
+        @media screen and (max-width: 561px) {
           font-size: 18px;
           margin-bottom: 62px;
         }
@@ -261,7 +265,7 @@ body {
         letter-spacing: normal;
         color: #ffffff;
         margin-bottom: 95px;
-        transition: .5s;
+        transition: 0.5s;
         &:hover,
         &:focus {
           background-color: #9f0e60;
@@ -271,7 +275,7 @@ body {
   }
   .cases {
     background: #f2f4f5;
-    padding: 73px 16px 79px;
+    padding: 73px 16px 54px;
     .container {
       max-width: 1166px;
     }
@@ -284,9 +288,12 @@ body {
       letter-spacing: normal;
       color: #0f2135;
       margin-bottom: 30px;
+      padding: 0 1%;
     }
-    .row {
-      justify-content: space-between;
+    .cases-items-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
     }
     .cases-items {
       border-radius: 10px;
@@ -295,14 +302,19 @@ body {
       padding: 0;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       overflow: hidden;
-      max-width: 352px;
-      @media screen and (max-width:1120px) {
-        max-width: 250px;
+      width: 96%;
+      height: 100%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
       }
-      .case_image {
+      .image {
         height: 163px;
+        overflow: hidden;
+        .case_image {
+          width: 100%;
+          height: auto;
+        }
       }
       .cases-items-item {
         padding: 20px 25px 0;
@@ -325,6 +337,7 @@ body {
           letter-spacing: normal;
           color: #0f2135;
           margin-bottom: 12px;
+          overflow-wrap: break-word;
         }
         .text {
           font-size: 14px;
@@ -334,6 +347,7 @@ body {
           line-height: 1.43;
           letter-spacing: normal;
           color: #0f2135;
+          overflow-wrap: break-word;
         }
       }
       .read-more {
@@ -343,6 +357,8 @@ body {
         align-items: center;
         padding: 17px 25px 22px;
         color: #7f8d9c;
+        margin-top: auto;
+        text-decoration: none;
         p {
           font-size: 14px;
           font-weight: 500;
@@ -350,13 +366,13 @@ body {
           font-style: normal;
           line-height: 1.71;
           letter-spacing: normal;
-          margin: 0;
+          margin: 0 10px 0 0;
         }
-        transition: .5s;
+        transition: 0.5s;
         svg {
           path {
             fill: #7f8d9c;
-            transition: .5s;
+            transition: 0.5s;
           }
         }
         &:hover,
@@ -371,17 +387,21 @@ body {
         }
       }
     }
+    .cases-items.error {
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 .footer {
   padding: 75px 0 92px;
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     padding-top: 45px;
   }
   .container {
     max-width: 1166px;
     .footer-text {
-      @media screen and (min-width:768px) {
+      @media screen and (min-width: 768px) {
         padding-right: 19px;
       }
       p:first-of-type {
@@ -393,7 +413,7 @@ body {
         letter-spacing: normal;
         color: #0f2135;
         margin-bottom: 65px;
-        @media screen and (max-width:768px) {
+        @media screen and (max-width: 768px) {
           margin-bottom: 19px;
         }
       }
@@ -406,12 +426,12 @@ body {
         letter-spacing: normal;
         color: #7f8d9c;
       }
-      @media screen and (max-width:768px) {
+      @media screen and (max-width: 768px) {
         margin-bottom: 13px;
       }
     }
     .footer-form {
-      @media screen and (min-width:768px) {
+      @media screen and (min-width: 768px) {
         padding-left: 19px;
       }
       .form {
@@ -429,7 +449,7 @@ body {
           line-height: normal;
           letter-spacing: normal;
           margin-bottom: 27px;
-          transition: .5s;
+          transition: 0.5s;
           &:hover,
           &:focus {
             border: 1px solid #e43898;
@@ -452,7 +472,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: .5s;
+            transition: 0.5s;
             &:hover,
             &:focus {
               border: solid 1px #e43898;
@@ -473,7 +493,7 @@ body {
             color: #0f2135;
             margin-left: 15px;
             margin-bottom: 0;
-            @media screen and (max-width:375px){
+            @media screen and (max-width: 375px) {
               font-size: 15px;
             }
             a {
@@ -499,8 +519,8 @@ body {
             letter-spacing: normal;
             color: #ffffff;
             margin-right: 17px;
-            transition: .5s;
-            @media screen and (max-width:375px){
+            transition: 0.5s;
+            @media screen and (max-width: 375px) {
               width: 155px;
             }
             &:hover,
@@ -522,8 +542,8 @@ body {
             line-height: normal;
             letter-spacing: normal;
             color: #e43898;
-            transition: .5s;
-            @media screen and (max-width:375px){
+            transition: 0.5s;
+            @media screen and (max-width: 375px) {
               width: 110px;
             }
             &:hover,

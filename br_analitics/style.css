@@ -78,8 +78,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
   cursor: pointer;
 }
 
@@ -96,20 +96,21 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 
 .header .mobile-nav {
   display: none;
   border-top: 1px solid #ffffff;
   position: absolute;
-  top: -370px;
   left: 0;
   right: 0;
   z-index: -1;
-  -webkit-transition: .8s ease;
-  transition: .8s ease;
+  -webkit-transform: translateY(-570px);
+          transform: translateY(-570px);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 @media screen and (max-width: 561px) {
@@ -158,6 +159,13 @@ body {
   margin-top: 14px;
 }
 
+.header .mobile-nav.visible {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
 .header .head-scroll {
   padding: 13px 0;
   position: fixed;
@@ -166,8 +174,8 @@ body {
   left: 0;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
-  -webkit-transition: all .8s ease;
-  transition: all .8s ease;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
   z-index: 1000;
 }
 
@@ -222,8 +230,8 @@ body {
   line-height: normal;
   letter-spacing: normal;
   color: #ffffff;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header .head-scroll .call button:hover, .header .head-scroll .call button:focus {
@@ -234,8 +242,8 @@ body {
 .header .head-scroll.scrolled {
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: all .8s ease;
-  transition: all .8s ease;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .header .navigation {
@@ -256,19 +264,19 @@ body {
   letter-spacing: normal;
   color: #ffffff;
   padding: 8px 0;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   position: relative;
 }
 
 .header .navigation .nav-link::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 8px;
   position: absolute;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header .navigation .nav-link:hover::after {
@@ -357,8 +365,8 @@ body {
   letter-spacing: normal;
   color: #ffffff;
   margin-bottom: 95px;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .main .screen .content .btn:hover, .main .screen .content .btn:focus {
@@ -367,7 +375,7 @@ body {
 
 .main .cases {
   background: #f2f4f5;
-  padding: 73px 16px 79px;
+  padding: 73px 16px 54px;
 }
 
 .main .cases .container {
@@ -383,12 +391,17 @@ body {
   letter-spacing: normal;
   color: #0f2135;
   margin-bottom: 30px;
+  padding: 0 1%;
 }
 
-.main .cases .row {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.main .cases .cases-items-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 25px;
 }
 
 .main .cases .cases-items {
@@ -404,21 +417,25 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   overflow: hidden;
-  max-width: 352px;
+  width: 96%;
+  height: 100%;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 768px) {
   .main .cases .cases-items {
-    max-width: 250px;
+    width: 100%;
   }
 }
 
-.main .cases .cases-items .case_image {
+.main .cases .cases-items .image {
   height: 163px;
+  overflow: hidden;
+}
+
+.main .cases .cases-items .image .case_image {
+  width: 100%;
+  height: auto;
 }
 
 .main .cases .cases-items .cases-items-item {
@@ -445,6 +462,7 @@ body {
   letter-spacing: normal;
   color: #0f2135;
   margin-bottom: 12px;
+  overflow-wrap: break-word;
 }
 
 .main .cases .cases-items .cases-items-item .text {
@@ -455,6 +473,7 @@ body {
   line-height: 1.43;
   letter-spacing: normal;
   color: #0f2135;
+  overflow-wrap: break-word;
 }
 
 .main .cases .cases-items .read-more {
@@ -470,8 +489,10 @@ body {
           align-items: center;
   padding: 17px 25px 22px;
   color: #7f8d9c;
-  -webkit-transition: .5s;
-  transition: .5s;
+  margin-top: auto;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .main .cases .cases-items .read-more p {
@@ -481,13 +502,13 @@ body {
   font-style: normal;
   line-height: 1.71;
   letter-spacing: normal;
-  margin: 0;
+  margin: 0 10px 0 0;
 }
 
 .main .cases .cases-items .read-more svg path {
   fill: #7f8d9c;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .main .cases .cases-items .read-more:hover, .main .cases .cases-items .read-more:focus {
@@ -497,6 +518,11 @@ body {
 
 .main .cases .cases-items .read-more:hover svg path, .main .cases .cases-items .read-more:focus svg path {
   fill: #e43898;
+}
+
+.main .cases .cases-items.error {
+  width: 100%;
+  text-align: center;
 }
 
 .footer {
@@ -572,8 +598,8 @@ body {
   line-height: normal;
   letter-spacing: normal;
   margin-bottom: 27px;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .footer .container .footer-form .form input[type="text"]:hover, .footer .container .footer-form .form input[type="text"]:focus {
@@ -610,8 +636,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .footer .container .footer-form .form .check .checkbox:hover, .footer .container .footer-form .form .check .checkbox:focus {
@@ -664,8 +690,8 @@ body {
   letter-spacing: normal;
   color: #ffffff;
   margin-right: 17px;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media screen and (max-width: 375px) {
@@ -692,8 +718,8 @@ body {
   line-height: normal;
   letter-spacing: normal;
   color: #e43898;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media screen and (max-width: 375px) {
